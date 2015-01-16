@@ -85,9 +85,7 @@ public class TodoActivity extends ActionBarActivity {
             // Extract name value from result extras
             String itemName = data.getExtras().getString("finalName");
             int itemPos = Integer.valueOf(data.getExtras().getString("finalPos"));
-            System.out.println("!!!!"+itemPos);
             items.remove(itemPos);
-            System.out.println(items);
             items.add(itemPos, itemName);
             itemsAdapter.notifyDataSetChanged();
             writeItems();
